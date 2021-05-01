@@ -20,21 +20,14 @@
     text-align: center;
   }
 
-  &-line {
-    border-top: 0.4rem solid $default-shade;
-    display: block;
-    margin: 0 auto 3rem;
-    width: 4rem;
-  }
+  // &-line {
+  //   border-top: 0.4rem solid $default-shade;
+  //   display: block;
+  //   margin: 0 auto 3rem;
+  //   width: 4rem;
+  // }
 
-  p {
-    margin: 0 0 1rem;
-    text-align: justify;
-  }
 
-  a:hover {
-    text-decoration: underline;
-  }
 
   img {
     margin: 0 auto 0.5rem;

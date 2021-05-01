@@ -6,7 +6,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relative_url }}">
@@ -16,8 +17,46 @@
   <!-- RSS -->
   {% feed_meta %}
 
+  <!-- scroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $( window ).scroll( function() {
+      if ( $( this ).scrollTop() > 500 ) {
+        $( '.top' ).fadeIn();
+      } else {
+        $( '.top' ).fadeOut();
+      }
+    } );
+    $( '.top' ).click( function() {
+      $( 'html, body' ).stop().animate( { scrollTop : 0 }, 100);
+      return false;
+    } );
+  </script>
+
+
+
   <!-- Google Analytics-->
   {% if site.google_analytics and jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
+
+  <!-- Mathajax-->
+  {% if site.mathjax %}
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  {% endif %}
+
 </head>

@@ -1,20 +1,28 @@
 # Site settings
 title:          Tale
+baseurl:        ""
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+url:            "https://github.metterian.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         SeungJun Lee
+  url:          https://github.metterian.io
+  email:        dzzy6505gmail.com
 
 # Build settings
 markdown:       kramdown
+kramdown:
+  input: GFM
+  syntax_hightlighter: rouge
+
+highlighter: rouge
+
+
+
 include:
   - _pages
 
@@ -39,3 +47,7 @@ exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
 # Disqus (Set to your disqus id)
 disqus:         jekyll-tale
+
+
+# Plugins
+mathjax: true # whether support mathjax
