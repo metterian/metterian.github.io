@@ -43,20 +43,23 @@
   <!-- Mathajax-->
   {% if site.mathjax %}
   <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
+    MathJax.Hub.Config({
+
     tex2jax: {
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
       inlineMath: [['$','$'], ['\\(','\\)']],
-      processEscapes: true
+      processEscapes: true,
+      processEnvironments: true
     },
     TeX: {
       equationNumbers: {
-        autoNumber: "AMS"
+        autoNumber: "none"
       }
-    }
+    },
   });
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
   {% endif %}
 
 </head>

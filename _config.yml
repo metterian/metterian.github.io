@@ -16,10 +16,13 @@ author:
 # Build settings
 markdown:       kramdown
 kramdown:
-  input: GFM
   syntax_hightlighter: rouge
+  input: GFM
+
+
 
 highlighter: rouge
+
 
 
 
