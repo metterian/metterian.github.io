@@ -58,6 +58,7 @@ blockquote {
   margin-block-end: 3px;
   margin-inline-start: 2px;
   margin-inline-end: 2px;
+  margin: 1rem 0 1rem 0;
 }
 
 blockquote::before {
@@ -78,9 +79,9 @@ img {
   max-width: 100%;
 }
 
-td {
-  vertical-align: top;
-}
+// td {
+//   vertical-align: top;
+// }
 
 .transition {
     transition: all 0.3s ease-in-out;
