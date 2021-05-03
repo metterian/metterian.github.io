@@ -112,7 +112,7 @@
     h2 {
         padding: 30px 0 12px 0;
         font-weight: 700;
-        font-size: 1.8rem;
+        font-size: 1.8remg;
     }
 
     h2:first-child {
@@ -171,7 +171,9 @@
     }
 
     ul {
-        padding-left: 12px;
+        // padding-left: 12px;
+        margin-left: 1rem;
+        margin-bottom: 0.4rem;
         li {
             list-style: none;
             padding: 6px 0;
@@ -183,15 +185,15 @@
         li:before {
             content: "";
             position: absolute;
-            width: 8px;
-            height: 8px;
-            background-color: $grey-5;
+            width: 6px;
+            height: 6px;
+            background-color: $default-shade;
             border-radius: 50%;
             left: -22px;
             top: 16px;
 
             @media (max-width: $break-small) {
-                top: 14px;
+                // top: 14px;
             }
         }
 

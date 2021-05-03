@@ -61,7 +61,7 @@ tags: AI NLP
 
 GPT와 GPT-2는 다음과 같은 방식으로 작동한다. ***decoder*** 혹은 ***causal*** 이라고 불리는 모델이 다음 단어를 예측하기 위해 왼쪽 문맥을 사용한다.
 
-![https://miro.medium.com/max/2077/1*YmND0Qj8O6b35J1yU_CPKQ.png](https://miro.medium.com/max/2077/1*YmND0Qj8O6b35J1yU_CPKQ.png)
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gq5a4zj7k2j30w20lwjs5.jpg" alt="https://miro.medium.com/max/2077/1*YmND0Qj8O6b35J1yU_CPKQ.png" style="zoom: 50%;" />
 
 Decoder/Casual 트랜스포머는 왼쪽에서 부터 다음 단어를 생성을 예측한다. [어텐션 메커니즘 (Attention Mechanism)](https://www.notion.so/Attention-Mechanism-d6ede65d09ee4be9b20fc4f19e074d13) 을 기반으로 한다. 어텐션 매커니즘은 다음 사이트에서 자세한 내용을 찾아 볼 수 있다 .[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 
@@ -90,7 +90,7 @@ model = OpenAIGPTDoubleHeadsModel.from_pretrained('openai-gpt')
 tokenizer = OpenAIGPTTokenizer.from_pretrained('openai-gpt')
 ```
 
-*OpenAI GPT Double Heads Model*라는 모델를 불러옴
+*OpenAI GPT Double Heads Model* 라는 모델를 불러옴
 
 
 
@@ -110,7 +110,7 @@ tokenizer = OpenAIGPTTokenizer.from_pretrained('openai-gpt')
 
 문맥(Context) 세그먼트(부분)를 하나의 시퀀스로 **연결(Concatenate)**시켜, 그 대답을 마지막에 놓는 것이다. 그런 다음, 다음 시퀀스를 계속 생성하여 토큰으로 응답 토큰 생성할 수 있다.
 
-![https://miro.medium.com/max/4711/1*RWEUB0ViLTdMjIQd61_WIg.png](https://miro.medium.com/max/4711/1*RWEUB0ViLTdMjIQd61_WIg.png)
+![https://miro.medium.com/max/4711/1*RWEUB0ViLTdMjIQd61_WIg.png](https://tva1.sinaimg.cn/large/008i3skNgy1gq5afy5h9aj320p0owwgz.jpg)
 
 (파란색): 병합된 페르소나, (핑크), (녹색): 이전 대화 히스토리
 
@@ -126,7 +126,7 @@ tokenizer = OpenAIGPTTokenizer.from_pretrained('openai-gpt')
 
 이를 해결 하기 위해 단어, 위치 및 세그먼트(***word, position and segments***)에 대해 입력을 받는 3개의 병렬 입력 시퀀스를 만들고,  이들을 하나의 단일 시퀀스(Single Sequence)로 결합한다. 즉, 단어 위치 및 세그먼트 임베딩의 세 가지 유형을 합산하는 것입니다.
 
-![https://miro.medium.com/max/4711/1*r7vi6tho6sfpVx-ZQLPDUA.png](https://miro.medium.com/max/4711/1*r7vi6tho6sfpVx-ZQLPDUA.png)
+![https://miro.medium.com/max/4711/1*r7vi6tho6sfpVx-ZQLPDUA.png](https://tva1.sinaimg.cn/large/008i3skNgy1gq5ag3gx7ij320p0py77x.jpg)
 
 ## 실행
 
