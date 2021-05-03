@@ -2,7 +2,7 @@
 layout: post
 title: "양방향 연결 리스트 (Doubly Linked Lists)"
 author: "metterian"
-tags: 프로그래머스, 자료구조
+tags: 프로그래머스 자료구조
 ---
 # 양방향 연결 리스트 (Doubly Linked Lists)
 

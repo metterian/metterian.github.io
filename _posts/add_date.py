@@ -13,7 +13,7 @@ def append_date(md_files) -> None:
 
         if not file_dt:
             file_path = os.path.join(BASE_DIR, md_file)
-            file_dt = datetime.datetime.fromtimestamp(os.path.getctime(file_path))
+            file_dt = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
             file_dt = datetime.datetime.strftime(file_dt, "%Y-%m-%d")
             os.rename(file_path, "-".join([file_dt,md_file]))
             print(md_file, "\t-->\t", "-".join([file_dt,md_file]))
@@ -24,7 +24,6 @@ def get_yaml(title, tags=[], layout = 'post') -> str:
     yaml = "---\n" + "layout: " + layout + "\n" + 'title: ' + '"'+ title+'"' +"\n" + """author: "metterian"\n""" + "tags: " + " ".join(tags) + "\n" + "---\n"
     return yaml
 
-get_yaml("대체 시그모이드", tags=['AI', 'math'])
 #%%
 
 """ Append YAML setting in file """

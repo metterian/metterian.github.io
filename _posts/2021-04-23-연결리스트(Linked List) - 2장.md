@@ -2,7 +2,7 @@
 layout: post
 title: "연결리스트(Linked List) - 2장"
 author: "metterian"
-tags: 프로그래머스, 자료구조
+tags: 프로그래머스 자료구조
 ---
 # 연결리스트(Linked List) - 2장
 

@@ -2,7 +2,7 @@
 layout: post
 title: "우선순위 큐(Priority Queues)"
 author: "metterian"
-tags: 프로그래머스, 자료구조
+tags: 프로그래머스 자료구조
 ---
 # 우선순위 큐(Priority Queues)
 

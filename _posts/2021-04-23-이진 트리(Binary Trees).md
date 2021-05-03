@@ -2,7 +2,7 @@
 layout: post
 title: "이진 트리(Binary Trees)"
 author: "metterian"
-tags: 프로그래머스, 자료구조
+tags: 프로그래머스 자료구조
 ---
 # 이진 트리(Binary Trees)
 
