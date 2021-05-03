@@ -37,26 +37,26 @@ footer>.footer_wrap,
   }
 
 
-.nav-container {
-  li {
-      font-family: $source;
-      display: inline-block;
-      margin: 0 40px 0 0;
+// .nav-container {
+//   li {
+//       font-family: $source;
+//       display: inline-block;
+//       margin: 0 40px 0 0;
 
-      &:last-child {
-          margin-right: 0;
-      }
+//       &:last-child {
+//           margin-right: 0;
+//       }
 
-      @media (max-width: $break-small) {
-          margin: 0 24px 0 0;
-          font-size: 16px;
-      }
+//       @media (max-width: $break-small) {
+//           margin: 0 24px 0 0;
+//           font-size: 16px;
+//       }
 
-  }
-    li:hover {
-          opacity: 0.5;
-    }
-}
+//   }
+//     li:hover {
+//           opacity: 0.5;
+//     }
+// }
 
 .active {
     padding-bottom: 6px;
@@ -71,9 +71,9 @@ footer>.footer_wrap,
     padding-bottom: 0;
 }
 
-a {
-   color: $grey-0;
-}
+// a {
+//    color: $grey-0;
+// }
 
 //footer
 
