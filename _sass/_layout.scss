@@ -11,7 +11,7 @@
 main,
 footer>.footer_wrap,
 .nav-container {
-  margin: 0 auto;
+//   margin: 0 auto;
   max-width: 750px;
   width: 80%;
     @media (max-width: $break-small) {
@@ -21,11 +21,10 @@ footer>.footer_wrap,
 
 .nav {
     overflow: auto;
-    padding: 24px 0;
+    // padding: 24px 0;
 
   &-container {
-      margin: 0 auto;
-    //   padding-bottom: 10px;
+    //   margin: 0 auto;
       position: relative;
   }
 }
@@ -81,7 +80,7 @@ footer {
     font-family: $source;
     padding: 36px 0 46px 0;
     // background-color: $grey-3;
-    color: $default-tint;
+    color: $default-color;
     border-top: 1px solid $grey-2;
     border-bottom: 1px solid $grey-2;
 
@@ -99,7 +98,7 @@ footer {
 }
             .email {
                 font-size: 16px;
-                color: $default-tint;
+                color: $default-color;
             }
 
             a.email:hover {
@@ -111,7 +110,7 @@ footer {
                 a {
                     margin-right: 24px;
                     svg {
-                        fill: $default-tint;
+                        fill: $default-color;
                         width: 20px;
                     }
                 }
