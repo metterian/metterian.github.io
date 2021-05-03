@@ -1,6 +1,6 @@
 pre,
 code {
-  font-family: $monospaced;
+  font-family: $code-font;
 }
 
 code {
@@ -9,6 +9,7 @@ code {
   color: $code-color;
   font-size: 85%;
   padding: .25em .5em;
+  word-wrap: normal;
 }
 
 pre {

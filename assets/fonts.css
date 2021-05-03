@@ -1,8 +1,3 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-
-@import 'tale';
 @font-face {
     font-family: 'Cascadia Code';
     font-style: normal;
