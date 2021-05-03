@@ -16,15 +16,15 @@
   &-title {
     color: $default-shade;
     font-family: $sans-serif;
-    // font-size: 4rem;
+    font-size: 4rem;
     // margin: 1rem 0;
     text-align: center;
   }
 
   &-line {
-    border-top: 0.3rem solid $default-shade;
+    border-top: 0.2rem solid $default-shade;
     display: block;
-    margin: 0 auto 1rem;
+    margin: 0 auto 2rem;
     width: 5rem;
   }
 
