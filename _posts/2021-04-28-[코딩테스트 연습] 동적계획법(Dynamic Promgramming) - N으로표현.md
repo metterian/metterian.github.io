@@ -4,7 +4,7 @@ title: "[코딩테스트 연습] 동저�
 author: "metterian"
 tags: 프로그래머스 알고리즘
 ---
-# [코딩테스트 연습] 동적계획법(Dynamic Promgramming) - N으로표현
+# 동적계획법(Dynamic Promgramming) - N으로표현
 
 ###### 문제 설명
 

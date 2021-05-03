@@ -1,5 +1,5 @@
 #%%
-
+from math_parser import *
 import os, sys, time
 import datetime
 # %%
@@ -47,6 +47,9 @@ if __name__ == '__main__':
     append_date(md_files)
     md_files = [f for f in os.listdir(BASE_DIR) if os.path.isfile(os.path.join(BASE_DIR, f)) and '.md' in f]
     append_yaml(md_files, tags=sys.argv[1:] )
+
+    for md_file in md_files:
+        math_block_parser(file_path=md_file)
 
 
 
