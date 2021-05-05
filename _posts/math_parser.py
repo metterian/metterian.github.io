@@ -14,10 +14,15 @@ def math_block_parser(file_path) -> None:
                 lines[i] = '$$\n\n'
                 count += 1
 
+        elif '$' in line and not '$$' in line:
+            lines[i] = lines[i].replace('$', '$$')
+
     with open(file_path, mode="w+", encoding='utf-8') as f:
         f.writelines(lines)
 
 if __name__ == '__main__':
     math_block_parser(file_path=sys.argv[1])
+
+# %%
 
 # %%
