@@ -20,7 +20,7 @@ kramdown:
   syntax_hightlighter: rouge
   input: GFM
   hard_wrap: false
-  math_engine: katex
+  math_engine: mathjax
   highlighter: rouge
   lsi : false
   excerpt_separator: "\n\n"
