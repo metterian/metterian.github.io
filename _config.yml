@@ -19,13 +19,14 @@ markdown:       kramdown
 kramdown:
   syntax_hightlighter: rouge
   input: GFM
+  hard_wrap: false
+  math_engine: katex
+  highlighter: rouge
+  lsi : false
+  excerpt_separator: "\n\n"
+  incremental: false
 
 
-math_engine: katex
-highlighter: rouge
-lsi : false
-excerpt_separator: "\n\n"
-incremental: false
 
 
 
@@ -43,6 +44,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
+
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
