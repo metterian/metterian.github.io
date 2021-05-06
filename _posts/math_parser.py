@@ -16,15 +16,15 @@ def math_block_parser(file_path) -> None:
             else:
                 lines[i] = '$$\n'
                 count += 1
-        elif line == '> $$\n' or line == '>$$\n':
-            if lines[i-1] == '> \n' or lines[i-1] == '>\n' or lines[i-1]=='>':
-                continue
-            if not double:
-                lines[i] = '> \n' + line
-                double += 1
-            elif double == 1:
-                double -= 1
-                continue
+        # elif line == '> $$\n' or line == '>$$\n':
+        #     if lines[i-1] == '> \n' or lines[i-1] == '>\n' or lines[i-1]=='>':
+        #         continue
+        #     if not double:
+        #         lines[i] = '> \n' + line
+        #         double += 1
+        #     elif double == 1:
+        #         double -= 1
+        #         continue
     with open(file_path, mode="w+", encoding='utf-8') as f:
         f.writelines(lines)
 

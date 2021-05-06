@@ -48,7 +48,10 @@ def is_mathjax(md_file):
             continue
         if bracket == 2:
             break
-        cate, value = line.split(':')
+        try:
+            cate, value = line.split(':')
+        except:
+            cate, value = 1,1
         yaml[cate] = value
 
     if 'mathjax' in yaml and yaml['mathjax']:
