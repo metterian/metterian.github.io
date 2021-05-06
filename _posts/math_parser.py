@@ -17,7 +17,7 @@ def math_block_parser(file_path) -> None:
                 lines[i] = '$$\n'
                 count += 1
         elif line == '> $$\n' or line == '>$$\n':
-            if lines[i-1] == '> \n' or lines[i-1] == '>\n' or line[i-1]=='>':
+            if lines[i-1] == '> \n' or lines[i-1] == '>\n' or lines[i-1]=='>':
                 continue
             if not double:
                 lines[i] = '> \n' + line

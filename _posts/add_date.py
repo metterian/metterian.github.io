@@ -38,6 +38,25 @@ def append_yaml(md_files, tags) -> None:
             with open(md_file, 'w') as modified: modified.write(yaml + data)
             print("YAML Applied: ", md_file)
 
+def is_mathjax(md_file):
+    with open(md_file, 'r') as f : lines = f.readlines()
+    bracket = 0
+    yaml = {}
+    for line in lines:
+        if line == '---\n':
+            bracket += 1
+            continue
+        if bracket == 2:
+            break
+        cate, value = line.split(':')
+        yaml[cate] = value
+
+    if 'mathjax' in yaml and yaml['mathjax']:
+        return (True)
+    else:
+        return False
+
+
 
 if __name__ == '__main__':
     BASE_DIR = os.path.dirname((os.path.abspath(__file__)))
@@ -49,8 +68,12 @@ if __name__ == '__main__':
     append_yaml(md_files, tags=sys.argv[1:] )
 
     for md_file in md_files:
-        math_block_parser(file_path=md_file)
+        if not is_mathjax(md_file):
+            math_block_parser(file_path=md_file)
+        else:
+            continue
 
 
 
 # %%
+
