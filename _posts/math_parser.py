@@ -5,24 +5,30 @@ def math_block_parser(file_path) -> None:
         lines = f.readlines()
 
     count = 1
+    double = 0
     for i, line in enumerate(lines):
         if line == '$$\n':
+            if lines[i-1] == '\n' or lines[i+1] == '\n':
+                continue
             if count:
                 lines[i] = '\n$$\n'
                 count -= 1
             else:
-                lines[i] = '$$\n\n'
+                lines[i] = '$$\n'
                 count += 1
-
-        elif '$' in line and not '$$' in line:
-            lines[i] = lines[i].replace('$', '$$')
-
+        elif line == '> $$\n' or line == '>$$\n':
+            if lines[i-1] == '> \n' or lines[i-1] == '>\n' or line[i-1]=='>':
+                continue
+            if not double:
+                lines[i] = '> \n' + line
+                double += 1
+            elif double == 1:
+                double -= 1
+                continue
     with open(file_path, mode="w+", encoding='utf-8') as f:
         f.writelines(lines)
 
+
+
 if __name__ == '__main__':
     math_block_parser(file_path=sys.argv[1])
-
-# %%
-
-# %%
