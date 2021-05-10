@@ -100,10 +100,12 @@
     }
 
     h1 {
-        padding: 40px 0 16px 0;
-        font-weight: 700;
-        // font-size: 28px;
+        font-size: 2rem;
+        font-weight: 800;
         letter-spacing: -0.009em;
+        line-height: 2;
+        margin-top: 14px;
+        margin-bottom: 14px;
     }
 
     h1:first-child {
@@ -111,9 +113,11 @@
     }
 
     h2 {
-        padding: 30px 0 12px 0;
-        font-weight: 700;
-        font-size: 1.8remg;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 2;
+        margin-top: 14px;
+        margin-bottom: 14px;
     }
 
     h2:first-child {
@@ -121,12 +125,23 @@
     }
 
     h3 {
-        padding: 20px 0 10px 0;
-        font-size: 22px;
-        font-weight: 600;
+        font-size: 1.35rem;
+        font-weight: 800;
+        line-height: 2;
+        font-style: normal;
+        margin-top: 14px;
+        margin-bottom: 14px;
     }
 
-    h4, h5 {
+    h4 {
+        font-size: 1.12rem;
+        font-weight: 800;
+        line-height: 2;
+        font-style: normal;
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    h5 {
         padding: 12px 0 8px 0;
     }
 
@@ -135,11 +150,11 @@
     }
 
     h6 {
-        line-height: 1.6;
-        font-size: 17px;
+        line-height: normal;
+        font-size: 1rem;
         padding-bottom: 40px;
         color: $grey-1;
-        font-weight: 400;
+        font-weight: 800;
         text-align: center;
         @media (max-width: $break-small) {
             font-size: 15px;
