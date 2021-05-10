@@ -70,11 +70,11 @@ if __name__ == '__main__':
     md_files = [f for f in os.listdir(BASE_DIR) if os.path.isfile(os.path.join(BASE_DIR, f)) and '.md' in f]
     append_yaml(md_files, tags=sys.argv[1:] )
 
-    for md_file in md_files:
-        if not is_mathjax(md_file):
-            math_block_parser(file_path=md_file)
-        else:
-            continue
+    # for md_file in md_files:
+    #     if not is_mathjax(md_file):
+    #         math_block_parser(file_path=md_file)
+    #     else:
+    #         continue
 
 
 
