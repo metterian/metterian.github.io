@@ -1,7 +1,7 @@
 # Site settings
 title:          metterian blog
 baseurl:        ""
-description:    "Minimal Jekyll theme for storytellers"
+description:    "내일을 기록하기 위해서 오늘을 기록합니다 🤗"
 url:            "https://github.metterian.io"
 
 # Google Analytics
