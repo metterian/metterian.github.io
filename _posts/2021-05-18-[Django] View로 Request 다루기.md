@@ -28,7 +28,7 @@ homepage
 
 
 
-가장 간단한 view를 구현하기 위해서는 함수를 통해 구현해야 합니다. 여기서는 `index` 라는 함수를 만들어 보려고 합니다. request를 인자로 받아 HTTP Respones 프로토콜로 값을 전송하는 함수를 다음과 같이 작성 할 수 있습니다. 
+가장 간단한 view를 구현하기 위해서는 함수를 통해 구현해야 합니다. 여기서는 `index` 라는 함수를 만들어 보려고 합니다. request를 인자로 받아 HTTP Respones 프로토콜로 값을 전송하는 함수를 다음과 같이 작성 할 수 있습니다.
 
 ```python
 from django.shortcuts import HttpResponse, render
@@ -38,11 +38,11 @@ def index(request):
     return HttpRespones('Hello World!')
 ```
 
-
+<br>
 
 ## `url.py` 살펴 보기
 
-어떠한 요청이든 이렇게 처리하면 안되고 각각의 종류의 따른 요청을 구분 할 줄 알아야합니다. 이는 view에서 처리하는 것이 아닌 `url.py`에서 실행이 됩니다. 단, 이 파일은 app 디렉토리에 존재하지 않고 프로젝트 폴더에 프로젝트 이름과 동일한 디렉토리에 존재 합니다. 
+어떠한 요청이든 이렇게 처리하면 안되고 각각의 종류의 따른 요청을 구분 할 줄 알아야합니다. 이는 view에서 처리하는 것이 아닌 `url.py`에서 실행이 됩니다. 단, 이 파일은 app 디렉토리에 존재하지 않고 프로젝트 폴더에 프로젝트 이름과 동일한 디렉토리에 존재 합니다.
 
 ```bash
 webproj
@@ -65,7 +65,7 @@ webproj
     └── wsgi.py
 ```
 
-
+<br>
 
 `url.py` 파일을 열어 보면 이미 다음과 같은 로직이 존재 합니다. admin이라는 요청이 들어 왔을때, 이를 핸들링하는 로직입니다.
 
@@ -78,9 +78,9 @@ urlpatterns = [
 ]
 ```
 
+<br>
 
-
-이름 다음과 같이 우리가 구현하고자 하는 로직을 추가해 줍니다. 첫 페이지에 들어 갔을때의 요청을 `index` 함수로 처리하기 위해서 다음과 같이 작성해 줍니다. path에서 index 함수를 사용하기 위해서는 hompage에 있는 모듈 view를 불어와야 하는 점을 기억 해야 합니다. 
+이름 다음과 같이 우리가 구현하고자 하는 로직을 추가해 줍니다. 첫 페이지에 들어 갔을때의 요청을 `index` 함수로 처리하기 위해서 다음과 같이 작성해 줍니다. path에서 index 함수를 사용하기 위해서는 hompage에 있는 모듈 view를 불어와야 하는 점을 기억 해야 합니다.
 
 ```python
 from django.contrib import admin
@@ -97,7 +97,7 @@ urlpatterns = [
 
 ### Installed App 추가
 
-`setting.py`에 `startapp` 을 통해서 만들었던 homepage를 Installed App에 추가해 줍니다. 
+`setting.py`에 `startapp` 을 통해서 만들었던 homepage를 Installed App에 추가해 줍니다.
 
 ```python
 INSTALLED_APPS = [
@@ -113,11 +113,11 @@ INSTALLED_APPS = [
 
 
 
-
+<br>
 
 ## 관리자 계정 생성
 
-Django의 Admin 계정을 생성하기 위해서 다음과 같은 명령어를 실행 하면 오류를 만나게 됩니다. 
+Django의 Admin 계정을 생성하기 위해서 다음과 같은 명령어를 실행 하면 오류를 만나게 됩니다.
 
 ```bash
 $ python3 manage.py createsuperuser
@@ -144,4 +144,4 @@ Applying admin.0002_logentry_remove_auto_add... OK
 ...
 ```
 
-그러면 위와 같이 migrate가 완료된 결과를 확인 할 수 있습니다. 
+그러면 위와 같이 migrate가 완료된 결과를 확인 할 수 있습니다.

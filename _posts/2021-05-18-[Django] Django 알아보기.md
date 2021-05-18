@@ -7,9 +7,9 @@ tags: 프로그래머스 Django
 ---
 ## 들어가며
 
-기존에 배웠던 Flask는 "Micro"라는 말이 항상 앞에 붙는다. Micro Web Framework라고 불린다. 웹 프레임워크를 만드는데 최소한의 기능만을 제공해줘서 여기에 내가 추가 할 부분들을 구현하는 것이다. 반면에, 장고의 경우는 모든것이 내장되어 있어. Flask 대비 큰 덩어리로 시작해서 덩어리의 빈 부분을 채워가는 것이라고 생각하면 쉽다. 
+기존에 배웠던 Flask는 "Micro"라는 말이 항상 앞에 붙는다. Micro Web Framework라고 불린다. 웹 프레임워크를 만드는데 최소한의 기능만을 제공해줘서 여기에 내가 추가 할 부분들을 구현하는 것이다. 반면에, 장고의 경우는 모든것이 내장되어 있어. Flask 대비 큰 덩어리로 시작해서 덩어리의 빈 부분을 채워가는 것이라고 생각하면 쉽다.
 
-그러므로 Flask는 작은 프로젝트에서, Django는 큰 프로젝트에서 사용하기 적합하다. 
+그러므로 Flask는 작은 프로젝트에서, Django는 큰 프로젝트에서 사용하기 적합하다.
 
 ### 가상환경 설치하기
 
@@ -24,7 +24,7 @@ $ virtualenv venv
 $ source venv/bin/activate
 ```
 
-
+<br>
 
 ## Django Setup
 
@@ -37,6 +37,7 @@ $ pip3 install django
 ```
 
 
+<br>
 
 ### Django 프로젝트 시작하기
 
@@ -57,6 +58,7 @@ drwxr-xr-x   6 seungjun  staff   192B May 18 11:43 venv
 drwxr-xr-x   4 seungjun  staff   128B May 18 11:49 webproj
 ```
 
+<br>
 
 
 해당 폴더로 이동하여 디렉토리를 확인 하면 다음과 같다.`mange.py` 파일과 프로젝트 폴더로 된 또다른 파일을 확인 할 수 있다. 여기서 `mange.py` 파일을 통해서 서버를 실행 할 수 있다.
@@ -72,7 +74,7 @@ drwxr-xr-x  7 seungjun  staff   224B May 18 11:49 webproj
 (venv) ➜  webproj
 ```
 
-
+<br>
 
 다음과 같은 명령어를 입력하여 웹 서버를 실행 할 수 있다.
 
@@ -82,7 +84,7 @@ $ webproj python3 manage.py runserver
 
 그러면 다음과 같은 화면을 볼 수 있게 된다
 
-![image-20210518115240449](img/image-20210518115240449.png)
+![image-20210518115240449](./img/image-20210518115240449.png)
 
 <br>
 
@@ -101,7 +103,7 @@ copy python# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ```
 
- 
+<br>
 
 #### APP 등록
 
@@ -121,7 +123,7 @@ INSTALLED_APPS = [
 ]
 ```
 
- 
+<br>
 
 #### Templates 설정
 
@@ -145,7 +147,7 @@ copy pythonTEMPLATES = [
 ]
 ```
 
- 
+<br>
 
 #### DB설정
 
@@ -163,7 +165,7 @@ DATABASES = {
 }
 ```
 
-
+<br>
 
 #### 정적파일 설정
 
@@ -217,7 +219,7 @@ $ ls
 db.sqlite3 homepage   manage.py  webproj
 ```
 
-
+<br>
 
 ### App 폴더 살펴보기
 
@@ -237,7 +239,7 @@ homepage
 
 
 
-
+<br>
 
 ## Django의 MVT 패턴
 
