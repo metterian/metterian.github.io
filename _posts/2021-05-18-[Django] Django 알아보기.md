@@ -2,7 +2,8 @@
 layout: post
 title: "[Django] Django 알아보기"
 author: "metterian"
-tags: 
+tags: 프로그래머스 Django
+
 ---
 ## 들어가며
 
