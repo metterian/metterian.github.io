@@ -4,7 +4,7 @@ title: "[EDA 연습] Titanic Kaggle Dataset"
 author: "metterian"
 tags: 프로그래머스 Pandas
 ---
-# EDA 
+# EDA
 
 ## EDA ?
 
@@ -17,7 +17,6 @@ tags: 프로그래머스 Pandas
     ex) 상관관계, N/A? 등을 파악
 3. 데이터의 개별 속성 파악 하기
 
- 
 
 ## Exploratory Data Analysis
 
@@ -40,7 +39,7 @@ tags: 프로그래머스 Pandas
 
 
 ```python
-# 라이브러리 불러오기 
+# 라이브러리 불러오기
 
 import numpy as np
 import pandas as pd
@@ -57,7 +56,7 @@ import seaborn as sns
 titanic_df = pd.read_csv('./train.csv')
 ```
 
- 
+
 
 ## 1. 분석의 목적과 변수 확인
 
@@ -99,7 +98,7 @@ Parent = mother, father
 Child = daughter, son, stepdaughter, stepson
 Some children travelled only with a nanny, therefore parch=0 for them.
 
- 
+
 
 ### 살아 남은 사람들은 어떤 특징을 가지고 있을까?
 
@@ -226,7 +225,7 @@ titanic_df.head()
 
 
 
- 
+
 
 ### 각 column의 데이터 타입 확인하기
 
@@ -256,7 +255,7 @@ titanic_df.dtypes
 
 
 
- 
+
 
 ## 2. 데이터 전체적으로 살펴보기
 
@@ -511,13 +510,13 @@ sns.heatmap(titanic_df.corr());
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_21_0.png)
-    
 
 
- 
- 
+
+
+
 
 ### 결측치 확인
 
@@ -760,7 +759,7 @@ titanic_df.isnull().sum()
 
 
 
- 
+
 
 ## 3. 데이터의 개별 속성 파악하기
 
@@ -782,7 +781,7 @@ titanic_df['Survived'].value_counts()
 
 
 
-  
+
 
 #### 생존자와 사망자수를 Barplot으로 그려보기
 
@@ -794,12 +793,12 @@ sns.countplot(x = 'Survived', data=titanic_df);
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_32_0.png)
-    
 
 
- 
+
+
 
 ### PClass
 
@@ -970,12 +969,12 @@ sns.heatmap(titanic_df[['Pclass', 'Survived']].groupby('Pclass').mean());
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_38_0.png)
-    
 
 
- 
+
+
 
 ### III. SEX
 
@@ -1140,12 +1139,12 @@ sns.catplot(x = 'Sex', col='Survived', kind = 'count', data=titanic_df);
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_43_0.png)
-    
 
 
- 
+
+
 
 ### IV. Age
 
@@ -1235,12 +1234,12 @@ plt.show()
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_47_0.png)
-    
 
 
- 
+
+
 
 
 ```python
@@ -1255,7 +1254,7 @@ titanic_df[titanic_df.Survived==1]['Age']
     3      35.0
     8      27.0
     9      14.0
-           ... 
+           ...
     875    15.0
     879    56.0
     880    25.0
@@ -1265,7 +1264,7 @@ titanic_df[titanic_df.Survived==1]['Age']
 
 
 
- 
+
 
 ## Appendix
 
@@ -1279,9 +1278,9 @@ sns.catplot(x='Pclass', y='Survived', kind='point', data=titanic_df);
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_52_0.png)
-    
+
 
 
 이 그래프는 `Survived`에 대한 `Pclass`의 점추정치와 신뢰구간을 나타낸다
@@ -1292,12 +1291,12 @@ sns.catplot(x='Pclass', y='Survived', kind='point',hue='Sex', data=titanic_df);
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_54_0.png)
-    
 
 
- 
+
+
 
 ### Age + Pclass
 
@@ -1318,7 +1317,7 @@ titanic_df['Age'][titanic_df.Pclass==1]
     6      54.0
     11     58.0
     23     28.0
-           ... 
+           ...
     871    47.0
     872    33.0
     879    56.0
@@ -1337,12 +1336,12 @@ plt.legend(['1st class', '2nd class', '3rd class']);
 ```
 
 
-    
+
 ![png](4.%20EDA_files/4.%20EDA_58_0.png)
-    
 
 
- 
+
+
 
 ## Mission : It's Your Turn!
 
