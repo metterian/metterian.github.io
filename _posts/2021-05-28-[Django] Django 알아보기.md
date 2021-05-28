@@ -2,7 +2,7 @@
 layout: post
 title: "[Django] Django 알아보기"
 author: "metterian"
-tags: 
+tags: Django
 ---
 ## 들어가며
 

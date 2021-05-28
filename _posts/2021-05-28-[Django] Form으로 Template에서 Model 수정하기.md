@@ -2,7 +2,7 @@
 layout: post
 title: "[Django] Form으로 Template에서 Model 수정하기"
 author: "metterian"
-tags: 
+tags: Django
 ---
 ## 들어가며
 

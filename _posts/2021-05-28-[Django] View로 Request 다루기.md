@@ -2,7 +2,7 @@
 layout: post
 title: "[Django] View로 Request 다루기"
 author: "metterian"
-tags: 
+tags: Django
 ---
 ## 들어가며
 
