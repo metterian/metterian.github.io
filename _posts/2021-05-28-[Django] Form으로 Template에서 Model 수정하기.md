@@ -108,12 +108,15 @@ Google Form 같이 우리가 만든 Template에서 사용하고자 한다면 HTM
 
     <body>
         <h1>My Coffee List</h1>
+        {{ raw }}
         {% for coffee in coffee_list %}
             <p> {{coffee.name}}, {{coffee.price}} </p>
         {% endfor %}
-
+        {{ endraw}}
         <form>
+            {{ raw }}
             {{ coffee_form.as_p }}
+            {{ endraw }}
         </form>
     </body>
 </html>
