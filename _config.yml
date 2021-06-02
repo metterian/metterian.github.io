@@ -45,6 +45,7 @@ plugins:
 # Permalinks
 permalink: /:year-:month-:day/:title
 paginate: 6
+paginate_path: "/page:num/"
 
 # Excludes
 exclude: [Gemfile, Gemfile.lock, tale.gemspec]
