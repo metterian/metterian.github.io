@@ -1,43 +1,38 @@
 # Site settings
-title:          metterian blog
-baseurl:        ""
-description:    "내일을 기록하기 위해서 오늘을 기록합니다 🤗"
-url:            "https://github.metterian.io"
+title: metterian blog
+baseurl: ""
+description: "내일을 기록하기 위해서 오늘을 기록합니다 🤗"
+url: "https://github.metterian.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         SeungJun Lee
-  url:          https://github.metterian.io
-  email:        dzzy6505gmail.com
-  gitgub:       metterian
+  name: SeungJun Lee
+  url: https://github.metterian.io
+  email: dzzy6505gmail.com
+  gitgub: metterian
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 kramdown:
   syntax_hightlighter: rouge
   input: GFM
   hard_wrap: false
   math_engine: mathjax
   highlighter: rouge
-  lsi : false
+  lsi: false
   excerpt_separator: "\n\n"
   incremental: false
-
-
-
-
-
 
 include:
   - _pages
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
 # Gems
 plugins:
@@ -48,15 +43,14 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+permalink: /:year-:month-:day/:title
+paginate: 6
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+exclude: [Gemfile, Gemfile.lock, tale.gemspec]
 
 # Disqus (Set to your disqus id)
-disqus:         jekyll-tale
-
+disqus: jekyll-tale
 
 # Plugins
 mathjax: true # whether support mathjax
