@@ -44,7 +44,7 @@ plugins:
 
 # Permalinks
 permalink: /:year-:month-:day/:title
-paginate: 6
+paginate: 10
 paginate_path: "/page:num/"
 
 # Excludes

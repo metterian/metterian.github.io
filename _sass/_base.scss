@@ -5,7 +5,7 @@
 
 html,
 body {
-  color: $grey-0;
+  color: #3d454d;
   margin: 0;
   padding: 0;
 }
@@ -29,11 +29,9 @@ h3,
 h4,
 h5,
 h6,
-
-
 a {
-  color: #242A31;
-    text-decoration: none;
+  color: #242a31;
+  text-decoration: none;
 }
 
 blockquote {
@@ -56,12 +54,12 @@ blockquote {
 }
 
 blockquote::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0rem;
   left: 0rem;
   height: 100%;
-  width: .30rem;
+  width: 0.3rem;
   background: #3884ff;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -78,7 +76,7 @@ img {
 // }
 
 .transition {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 // ::selection {
