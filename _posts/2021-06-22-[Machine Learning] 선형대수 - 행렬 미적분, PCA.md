@@ -755,7 +755,7 @@ print(np.trace(A @ A.T)**0.5)
 
 ## 선형독립과 랭크(Rank)
 
-벡터들의 집합 $\left\{x_{1}, x_{2}, \ldots, x_{n}\right\} \subset \mathbb{R}^{m}$에 속하는 어떤 벡터도 나머지 벡터들의 선형 조합으로 나타 낼 수 없을 때 이를 선형독립(linear independent)라고 하고, 역으로 어떤 벡터가 나머지 벡터들을 선형 조합으로 나타내질 수 있을 때 이를 선형 종속이라고 부른다
+벡터들의 집합 $$\left\{x_{1}, x_{2}, \ldots, x_{n}\right\} \subset \mathbb{R}^{m}$$에 속하는 어떤 벡터도 나머지 벡터들의 선형 조합으로 나타 낼 수 없을 때 이를 선형독립(linear independent)라고 하고, 역으로 어떤 벡터가 나머지 벡터들을 선형 조합으로 나타내질 수 있을 때 이를 선형 종속이라고 부른다
 
 
 ```python
@@ -838,7 +838,7 @@ $x^Ty=0$가 성립하는 두 벡터 $x, y \in \mathbb{R}^n$를 직교(orthogonal
 - $UU^T = I$ 이건 밑에서 증명
 - $U^{-1} = U^T$
 - $\|Ux\|_2 = \|x\|_2$ for any $x\in \mathbb{R}^{n}$
-    $\|U x\|_{2}=\sqrt{(U x)^{\top}(U x)}=\sqrt{x^{\top} U^{\top} v x}=\sqrt{x^{\top} x}=\|x\|_{2}$
+- $\|U x\|_{2}=\sqrt{(U x)^{\top}(U x)}=\sqrt{x^{\top} U^{\top} v x}=\sqrt{x^{\top} x}=\|x\|_{2}$
 
 직교 행렬의 이러한 성질 때문에 직교 행렬을 이용하면 선형시스템의 해를 구하기 쉽습니다. 왜냐하면 직교행렬의 역행렬을 구하기 위해서 단순히 직교행렬의 전치행렬만 구하면 되기 때문이죠
 
@@ -932,11 +932,12 @@ $U^TU = I$인 정방행렬 $U$는 $UU^T = I$임을 보이기
 
 ### 행렬식 (Determinant)
 
-정방행렬 $A\in \mathbb{R}^{n\times n}$의 행렬식(determinant) $|A|$ (또는 $\det A$)는 다음과 같이 계산할 수 있다.
+정방행렬 $A\in \mathbb{R}^{n\times n}$의 행렬식(determinant) $\vert A\vert$ (또는 $\det A$)는 다음과 같이 계산할 수 있다.
 
 $$
-|A| = A_{1,1}\times|A^{(1,1)}| - A_{1,2}\times|A^{(1,2)}| + A_{1,3}\times|A^{(1,3)}| - A_{1,4}\times|A^{(1,4)}| + \cdots ± A_{1,n}\times|A^{(1,n)}|
+\vert A\vert = A_{1,1}\times\vert A^{(1,1)}\vert - A_{1,2}\times\vert A^{(1,2)}\vert + A_{1,3}\times\vert A^{(1,3)}\vert - A_{1,4}\times\vert A^{(1,4)}\vert + \cdots ± A_{1,n}\times\vert A^{(1,n)}\vert
 $$
+
 where $A^{(i,j)}$ is the matrix $A$ without row $i$ and column $j$.
 
 $$
@@ -959,11 +960,22 @@ $$
 
 이제 위의 $2 \times 2$ 행렬들의 행렬식을 계산하면 된다.
 
-$\left | \begin{bmatrix} 5 & 6 \\ 8 & 0 \end{bmatrix} \right | = 5 \times 0 - 6 \times 8 = -48$
-
-$\left | \begin{bmatrix} 4 & 6 \\ 7 & 0 \end{bmatrix} \right | = 4 \times 0 - 6 \times 7 = -42$
-
-$\left | \begin{bmatrix} 4 & 5 \\ 7 & 8 \end{bmatrix} \right | = 4 \times 8 - 5 \times 7 = -3$
+$$
+\begin{array}{l}
+\left|\left[\begin{array}{ll}
+5 & 6 \\
+8 & 0
+\end{array}\right]\right|=5 \times 0-6 \times 8=-48 \\
+\left|\left[\begin{array}{ll}
+4 & 6 \\
+7 & 0
+\end{array}\right]\right|=4 \times 0-6 \times 7=-42 \\
+\left|\left[\begin{array}{ll}
+4 & 5 \\
+7 & 8
+\end{array}\right]\right|=4 \times 8-5 \times 7=-3
+\end{array}
+$$
 
 최종결과는 다음과 같다.
 
@@ -1039,8 +1051,8 @@ $$
 
 ### 행렬식의 중요한 성질들
 
-- $|I|=1$
-- $A$의 한 개의 row(행)에 $\in \mathbb{R}$를 스칼라배 하면, 행렬식은 $t|A|$이 됩니다.
+- $\mid I\mid =1$
+- $A$의 한 개의 row(행)에 $\in \mathbb{R}$를 스칼라배 하면, 행렬식은 $t \mid A\mid$이 됩니다.
 
 기하학적으로 생각해 보았을 때, 하나의 벡터에 스칼라배를 한다면 벡터의 길이가 스칼래배 만큼 들어나게 되고 그 만큼 면적의 크기도 늘어 나게 됩니다.
 
@@ -1050,24 +1062,26 @@ $$
 - & a_{2}^{T} & - \\
 & \vdots & \\
 - & a_{n}^{T} & -
-\end{array}\right]\right|=t|A|
+\end{array}\right]\right|=t\mid A\mid
 $$
 
-- $A$의 두 row(행)을 교환하면 행렬식은 $-|A|$이 됩니다.
+- $A$의 두 row(행)을 교환하면 행렬식은 $-\mid A\mid $이 됩니다.
 
 $$
-\left|\left[\begin{array}{ccc}
+\left \vert \left[\begin{array}{ccc}
 - & a_{2}^{T} & - \\
 - & a_{1}^{T} & - \\
 & \vdots & \\
 - & a_{n}^{T} & -
-\end{array}\right]\right|=-|A|
+\end{array}\right]\right \vert=-\mid A\mid
 $$
 
-- For $A\in \mathbb{R}^{n\times n}$, $|A| = |A^T|$.
-- For $A, B\in \mathbb{R}^{n\times n}$, $|AB| = |A| |B|$.
-- For $A\in \mathbb{R}^{n\times n}$, $|A|=0$, if and only if A is singular (non-invertible). $A$가 singular이면 행들이 linearly dependent할 것인데, 이 경우 $S$의 형태는 부피가 0인 납작한 판의 형태가 될 것이다.
-- For $A\in \mathbb{R}^{n\times n}$ and $A$ non-singular, $|A^{-1}| = 1/|A|$.
+
+
+- For $A\in \mathbb{R}^{n\times n}$, $\vert A \vert = \vert A^T \vert$.
+- For $A, B\in \mathbb{R}^{n\times n}$, $\vert AB\vert  = \vert A \vert \vert B \vert$.
+- For $A\in \mathbb{R}^{n\times n}$, $\vert A\vert =0$, if and only if A is singular (non-invertible). $A$가 singular이면 행들이 linearly dependent할 것인데, 이 경우 $S$의 형태는 부피가 0인 납작한 판의 형태가 될 것이다.
+- For $A\in \mathbb{R}^{n\times n}$ and $A$ non-singular, $\vert A^{-1}\vert = 1/\vert A\vert$.
 
 
 
@@ -1106,6 +1120,7 @@ $x_{i}^{2}$ 의 계수를 $a_{i i}$ 에, $x_{i} x_{j}$ 의 계수의 $1 / 2$ 을
 $$
 x^TAx = (x^TAx)^T = x^TA^Tx = x^T\left(\frac{1}{2}A + \frac{1}{2}A^T\right)x
 $$
+
 즉, 위 식과 같이 행렬 $A$는 대칭행렬로 표현된다.
 
 따라서 이차형식에 나타나는 행렬을 대칭행렬로 가정하는 경우가 많다.
@@ -1349,7 +1364,7 @@ $x, b\in \mathbb{R}^n$, $A\in \mathbb{S}^n$일 때 다음이 성립한다.
 - $\nabla_x b^Tx = b$
 - $\nabla_x x^TAx = 2Ax$
 - $\nabla_x^2 x^TAx = 2A$
-- $\nabla_A \log |A| = A^{-1}$ ($A\in\mathbb{S}_{++}^n$인 경우)
+- $\nabla_A \log \vert A\vert = A^{-1}$ ($A\in\mathbb{S}_{++}^n$인 경우)
 
 ## 최소제곱법(Least Squares)
 $Ax = b$ 라는 선형 시스템이 주어졌다고 가정해보자. 행렬 $A \in \mathbb{R}^{m \times n}$ ($A$는 여기서 full rank)와 벡터 $b \in \mathbb{R}^{n}$가 주어졌고, $b \notin \mathcal{R}(A)$ 즉, $A$라는 선형 조합으로 벡터 $b$를 표현 할 수 없을때, $Ax = b$ 를 만족하는 벡터 $x \in \mathbb{R}^{n}$를 찾을 수 없습니다.
@@ -1357,7 +1372,7 @@ $Ax = b$ 라는 선형 시스템이 주어졌다고 가정해보자. 행렬 $A \
 이때, 선형 조합 $Ax$가 $b$와 가장 가까워지는 즉,
 
 $$
-\|A x-b\|_{2}^{2}
+\Vert A x-b\Vert_{2}^{2}
 $$
 
 을 최소화 시키는 $x$를 찾는 문제를 고려 할 수 있습니다. $\|x\|_{2}^{2}=x^{T} x$ 이므로,
@@ -1427,7 +1442,7 @@ $$u_i^TAu_i = \sum_{j=1}^n \lambda_j y_j^2 = \lambda_i$$
 
 우리가 이전에 배운 PCA를 가장 간단한 형태의 autoencoder라고 생각할 수 있습니다. 이러한 관점에서 PCA를 유도할 것인데, 위에서 설명한 내용으로도 충분히 설명 합니다.
 
-$m$개의 점들 $\left\{x_{1}, \ldots, x_{m}\right\}, x_{i} \in \mathbb{R}^{n}$ 이 주저쳤다고 가정해봅시다. 각각의 점들을 $l$차원 공간으로 투영시키는 함수 $f(x)=c \in \mathbb{R}^{l}$와 이것을 다시 $n$차원 공간으로 회복하는 함수 $g(c)$를 생각해봅시다. 이를 정리하면,$f$를 인코딩 함수 $g$를 디코딩 함수라고 하고,
+$m$개의 점들 $$\left\{x_{1}, \ldots, x_{m}\right\}, x_{i} \in \mathbb{R}^{n}$$ 이 주저쳤다고 가정해봅시다. 각각의 점들을 $l$차원 공간으로 투영시키는 함수 $f(x)=c \in \mathbb{R}^{l}$와 이것을 다시 $n$차원 공간으로 회복하는 함수 $g(c)$를 생각해봅시다. 이를 정리하면,$f$를 인코딩 함수 $g$를 디코딩 함수라고 하고,
 
 
 $$
