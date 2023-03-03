@@ -20,7 +20,6 @@ Streamlit은 파이썬으로 웹 애플리케이션을 쉽게 만들 수 있도�
 
 
 ```python
-Copy code
 import streamlit as st
 from transformers import BertModel
 
