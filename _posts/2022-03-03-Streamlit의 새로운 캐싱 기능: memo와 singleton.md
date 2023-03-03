@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Streamlit의 새로운 캐싱 기능: memo와 singleton"
+author: "metterian"
+tags: "개발"
+---
+
+
 Streamlit은 파이썬으로 웹 애플리케이션을 쉽게 만들 수 있도록 도와주는 라이브러리입니다. Streamlit에서 제공하는 캐싱 기능을 사용하면 애플리케이션의 속도를 향상시킬 수 있습니다. 이번에는 Streamlit의 새로운 캐싱 기능인 `@st.experimental_memo`와 @st.experimental_singleton에 대해 알아보겠습니다.
 
 `@st.cache`는 데이터를 캐싱하고 global object(TensorFlow sessions, database connections, etc)를 저장하기 위한 용도로 사용됩니다. 하지만 `@st.cache`는 느리고 메모리를 많이 사용하는 단점이 있습니다. 이를 보완하기 위해 새로운 캐싱 기능인 `@st.experimental_memo`와 @st.experimental_singleton이 도입되었습니다. 이 기능들은 `@st.cache`와 비교하여 10배 이상 빠르게 동작합니다.
