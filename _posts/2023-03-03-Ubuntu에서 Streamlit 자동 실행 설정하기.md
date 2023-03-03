@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "리눅스에서 Streamlit 자동 실행 설정하기"
+title: "Ubuntu에서 Streamlit 자동 실행 설정하기"
 author: "metterian"
 tags: "개발"
 ---
